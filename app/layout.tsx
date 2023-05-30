@@ -15,7 +15,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={` ${inter.className} max-w-7xl m-auto `}>
+        <h1 className='text-2xl font-bold py-5'>
+          Louis Uy
+        </h1>
+        {children}
+      </body>
     </html>
   )
 }
