@@ -1,7 +1,8 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Red_Hat_Display } from 'next/font/google'
+import Nav from '@/components/Nav'
 
-const inter = Inter({ subsets: ['latin'] })
+const red = Red_Hat_Display({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Create Next App',
@@ -15,10 +16,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={` ${inter.className} max-w-7xl m-auto `}>
-        <h1 className='text-2xl font-bold py-5'>
-          Louis Uy
-        </h1>
+      <body className={` ${red.className} max-w-7xl m-auto bg-[#1B1B1B] bg-none`}>
+        <Nav />
         {children}
       </body>
     </html>

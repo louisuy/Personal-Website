@@ -25,3 +25,8 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.text-outline-primary {
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: white;
+}
