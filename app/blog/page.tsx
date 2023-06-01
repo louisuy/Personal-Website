@@ -15,7 +15,10 @@ export default async function Blog() {
                 </Link>
                 {projects.map((projects: Project) => (
                     <div key={projects._id}>
-                        <p className='text-9xl font-black uppercase translate-x-32 translate-y-16 .text-outline-primary'>
+                        <p className='text-9xl font-black uppercase translate-x-32 translate-y-16 text-outline-primary text-white/[0]'>
+                            {projects.name}
+                        </p>
+                        <p className='absolute z-[-10] text-9xl font-black uppercase translate-x-32 -translate-y-16 text-white'>
                             {projects.name}
                         </p>
                         <div className=''>
@@ -27,9 +30,6 @@ export default async function Blog() {
                                 className='aspect-video object-cover overflow-hidden w-3/4'
                             />
                         </div>
-                        {/* <p className='text-9xl font-black uppercase translate-x-32 translate-y-16'>
-                            {projects.name}
-                        </p> */}
                     </div>
                 ))}
             </div>
