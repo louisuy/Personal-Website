@@ -14,8 +14,8 @@ export default async function Projects() {
                             <Image
                                 src={projects.image}
                                 alt={projects.name}
-                                width={4000}
-                                height={4000}
+                                width={2000}
+                                height={2000}
                                 className='rounded-3xl aspect-video object-cover overflow-hidden sm:aspect-square'
                             />
                         </div>
