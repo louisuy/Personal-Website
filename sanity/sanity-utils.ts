@@ -43,6 +43,8 @@ export async function getBlog(slug: string): Promise<Blog> {
         _createdAt,
         title,
         "slug": slug.current,
+        "image": image.asset->url,
+        url,
         content
         }`,
         { slug }
