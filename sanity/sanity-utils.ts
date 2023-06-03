@@ -1,6 +1,7 @@
 import { createClient, groq } from 'next-sanity';
 import clientConfig from './config/client-config'
 import { Blog } from "@/types/Blog";
+import { PhysComp } from "@/types/PhysComp";
 
 export async function getProjects() {
     const client = createClient({
@@ -39,6 +40,35 @@ export async function getBlogs(): Promise<Blog[]> {
 export async function getBlog(slug: string): Promise<Blog> {
     return createClient(clientConfig).fetch(
         groq`*[_type == "blog" && slug.current == $slug][0]{
+        _id,
+        _createdAt,
+        title,
+        "slug": slug.current,
+        "image": image.asset->url,
+        url,
+        content
+        }`,
+        { slug }
+    )
+}
+
+export async function getPhysCompBlogs(): Promise<PhysComp[]> {
+    return createClient(clientConfig).fetch(
+      groq`*[_type == "physcomp"]{
+        _id,
+        _createdAt,
+        title,
+        "slug": slug.current,
+        "image": image.asset->url,
+        url,
+        content
+      }`
+    )
+}
+  
+export async function getPhysCompBlog(slug: string): Promise<PhysComp> {
+    return createClient(clientConfig).fetch(
+        groq`*[_type == "physcomp" && slug.current == $slug][0]{
         _id,
         _createdAt,
         title,

@@ -20,7 +20,7 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
-      <body className={` ${red.className} max-w-7xl m-auto bg-[#1B1B1B] bg-none`}>
+      <body className={` ${red.className} max-w-7xl m-auto bg-[#1B1B1B] bg-none px-10`}>
         <Nav />
         {children}
       </body>

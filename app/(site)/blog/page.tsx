@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 export default async function Blog() {
     const blogs = await getBlogs();
-    console.log(blogs);
+
     return (
         <div>
             <div className=''>
