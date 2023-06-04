@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 'use client';
 
 import Image from 'next/image'
@@ -26,20 +27,19 @@ export default async function Blog() {
                 {physcomp.map((physcomp: PhysComp) => (
                     <div key={physcomp._id}>
                         <Link href={`/blog/deeno/${physcomp.slug}`}>
-                            <div className='flex flex-col md:flex-row'>
+                            <div className='flex flex-col pb-10 md:flex-row'>
                                 <img
                                     src={physcomp.image}
                                     alt={physcomp.title}
-                                    className='aspect-video object-cover overflow-hidden rounded-sm hover:opacity-50 transition duration-200 w-[100vw]'
+                                    className='w-[100vw] object-cover aspect-video rounded-sm hover:opacity-50 transition duration-200 md:w-[30vw]'
                                 />
                                 <div className='md:pl-5'>
                                     <p className='font-black text-4xl uppercase'>
                                         {physcomp.title}
                                     </p>
-                                    <br />
-                                    <div className='hidden md:flex'>
+                                    <p>
                                         {physcomp.excerpt}
-                                    </div>
+                                    </p>
                                 </div>
                             </div>
                         </Link>
