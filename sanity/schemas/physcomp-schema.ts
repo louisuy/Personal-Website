@@ -9,6 +9,11 @@ const physcomp = {
             type: 'string'
         },
         {
+            name: 'date',
+            title: 'Date',
+            type: 'date',
+        },
+        {
             name: 'slug',
             title: 'Slug',
             type: 'slug',

@@ -38,6 +38,27 @@ const project = {
         //     type: 'url',
         // },
         {
+            name: 'size',
+            title: 'Size',
+            type: 'string',
+            options: {
+                list: [
+                    { title: 'Square', value: 'square' },
+                    { title: 'Tall', value: 'tall' },
+                    { title: 'Wide', value: 'wide' },
+                ],}
+        },
+        {
+            name: 'type',
+            title: 'Type',
+            type: 'string',
+            options: {
+                list: [
+                    { title: 'Media', value: 'Media' },
+                    { title: 'Development', value: 'Development' },
+                ],}
+        },
+        {
             name: 'content',
             title: 'Content',
             type: 'array',

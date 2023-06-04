@@ -15,8 +15,10 @@ export async function getProjects() {
             _id,
             _createdAt,
             name,
+            type,
             "slug": slug.current,
             "image": image.asset->url,
+            size,
             url,
             content,
         }`
@@ -57,6 +59,7 @@ export async function getPhysCompBlogs(): Promise<PhysComp[]> {
       groq`*[_type == "physcomp"]{
         _id,
         _createdAt,
+        date,
         title,
         "slug": slug.current,
         "image": image.asset->url,
@@ -72,6 +75,7 @@ export async function getPhysCompBlog(slug: string): Promise<PhysComp> {
         groq`*[_type == "physcomp" && slug.current == $slug][0]{
         _id,
         _createdAt,
+        date,
         title,
         "slug": slug.current,
         "image": image.asset->url,
