@@ -58,7 +58,7 @@ const Nav = () => {
           Louis Uy
         </Link>
 
-        <div className="flex justify-between gap-5">
+        <div className="justify-between gap-5 hidden sm:flex">
           <Link href='/projects' className='text-xl py-5'>
             Projects
           </Link>

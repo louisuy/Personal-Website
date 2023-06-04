@@ -61,7 +61,8 @@ export async function getPhysCompBlogs(): Promise<PhysComp[]> {
         "slug": slug.current,
         "image": image.asset->url,
         url,
-        content
+        content,
+        "excerpt": array::join(string::split((pt::text(content)), "")[0..255], "") + "..."
       }`
     )
 }

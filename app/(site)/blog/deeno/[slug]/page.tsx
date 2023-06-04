@@ -11,14 +11,14 @@ type Props = {
 }
 const components: PortableTextComponents = {
     list: {
-      // Ex. 1: customizing common list types
-      bullet: ({children}) => <ul className="mt-xl pl-10">{children}</ul>,
+        // Ex. 1: customizing common list types
+        bullet: ({ children }) => <ul className="mt-xl pl-10">{children}</ul>,
     },
     listItem: {
         // Ex. 1: customizing common list types
-        bullet: ({children}) => <li style={{listStyleType: 'disc'}}>{children}</li>,
-      },
-  }
+        bullet: ({ children }) => <li style={{ listStyleType: 'disc' }}>{children}</li>,
+    },
+}
 
 export default async function PhysCompBlog({ params }: Props) {
     const physcompblog = await getPhysCompBlog(params.slug);
@@ -26,7 +26,7 @@ export default async function PhysCompBlog({ params }: Props) {
     return (
         <div>
             <br />
-            <div className="flex flex-row">
+            <div className="flex-row hidden sm:flex">
                 <Link href='/blog'>
                     <p className='text-base uppercase'>Blogs &#65125; </p>
                 </Link>
@@ -47,18 +47,12 @@ export default async function PhysCompBlog({ params }: Props) {
                 <h1 className="uppercase font-black text-7xl py-10 text-outline-primary text-white hover:text-white/0 transition duration-200">
                     {physcompblog.title}
                 </h1>
-                <Image
-                    src={physcompblog.image}
-                    alt={physcompblog.title}
-                    width={1280}
-                    height={720}
-                    className='aspect-video object-cover overflow-hidden pb-16'
-                />
+                <img src={physcompblog.image} alt={physcompblog.title} className="w-auto" />
             </div>
 
-
-            <PortableText 
-                value={physcompblog.content} 
+            <br />
+            <PortableText
+                value={physcompblog.content}
                 components={components}
             />
         </div>

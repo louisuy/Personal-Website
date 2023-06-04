@@ -26,20 +26,20 @@ export default async function Blog() {
                 {physcomp.map((physcomp: PhysComp) => (
                     <div key={physcomp._id}>
                         <Link href={`/blog/deeno/${physcomp.slug}`}>
-                            <div className='flex'>
-                                <Image
+                            <div className='flex flex-col md:flex-row'>
+                                <img
                                     src={physcomp.image}
                                     alt={physcomp.title}
-                                    width={400}
-                                    height={300}
-                                    className='aspect-video object-cover overflow-hidden rounded-sm hover:opacity-50 transition duration-200'
+                                    className='aspect-video object-cover overflow-hidden rounded-sm hover:opacity-50 transition duration-200 w-[100vw]'
                                 />
-                                <div className='pl-5'>
-                                    <p className='font-black text-4xl text-outline-primary text-white/[0] uppercase hover:text-white transition duration-200'>{physcomp.title}</p>
+                                <div className='md:pl-5'>
+                                    <p className='font-black text-4xl uppercase'>
+                                        {physcomp.title}
+                                    </p>
                                     <br />
-                                    <PortableText 
-                                        value={physcomp.content} 
-                                    />
+                                    <div className='hidden md:flex'>
+                                        {physcomp.excerpt}
+                                    </div>
                                 </div>
                             </div>
                         </Link>

@@ -30,3 +30,7 @@ body {
   -webkit-text-stroke: 1px;
   -webkit-text-stroke-color: white;
 }
+
+.text-outline-none {
+  -webkit-text-stroke: unset;
+}

@@ -2,7 +2,7 @@
 
 import { getBlog } from "@/sanity/sanity-utils";
 import { PortableText } from "@portabletext/react";
-import {PortableTextComponents} from '@portabletext/react'
+import { PortableTextComponents } from '@portabletext/react'
 import Link from "next/link";
 import Image from "next/image";
 
@@ -11,12 +11,12 @@ type Props = {
 }
 const components: PortableTextComponents = {
     list: {
-        bullet: ({children}) => <ul className="mt-xl pl-10">{children}</ul>,
+        bullet: ({ children }) => <ul className="mt-xl pl-10">{children}</ul>,
     },
     listItem: {
-        bullet: ({children}) => <li style={{listStyleType: 'disc'}}>{children}</li>,
+        bullet: ({ children }) => <li style={{ listStyleType: 'disc' }}>{children}</li>,
     },
-  }
+}
 
 export default async function Blog({ params }: Props) {
     const blog = await getBlog(params.slug);
@@ -49,8 +49,8 @@ export default async function Blog({ params }: Props) {
             </div>
 
 
-            <PortableText 
-                value={blog.content} 
+            <PortableText
+                value={blog.content}
                 components={components}
             />
         </div>
