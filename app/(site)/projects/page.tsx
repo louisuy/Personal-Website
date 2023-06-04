@@ -10,8 +10,8 @@ export default async function Projects() {
             {projects.map((project: Project) => (
                 <div
                     key={project._id}
-                    className={`${project.size === "wide" ? "col-span-2 aspect-[2]"
-                        : project.size === "tall" ? "row-span-2 aspect-[0.5]"
+                    className={`${project.size === "wide" ? "col-span-2 aspect-[2.015]"
+                        : project.size === "tall" ? "row-span-2 aspect-[0.485]"
                             : project.size === "square" ? "aspect-[1]" : ""
                         } rounded-3xl overflow-hidden`}
                 >
