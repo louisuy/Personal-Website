@@ -34,7 +34,7 @@ export default async function PhysCompBlog({ params }: Props) {
                 <Link href='/blog/deeno'>
                     <p className='text-base uppercase'>Deeno &#65125; </p>
                 </Link>
-                <Link href={`${physcompblog.slug}`} className="">
+                <Link href={`/blog/deeno/${physcompblog.slug}`} className="">
                     <p className='text-base uppercase'>{physcompblog.title} &#65125; </p>
                 </Link>
             </div>
@@ -54,7 +54,7 @@ export default async function PhysCompBlog({ params }: Props) {
             <br />
             <PortableText
                 value={physcompblog.content}
-                components={components}
+                components={{}}
             />
         </div>
     )
