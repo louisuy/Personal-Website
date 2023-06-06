@@ -4,16 +4,15 @@ import { Project } from '@/types/Project';
 
 export default async function Projects() {
     const projects = await getProjects();
-    console.log(projects);
     return (
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-3 sm:gap-4 gap-2">
             {projects.map((project: Project) => (
                 <div
                     key={project._id}
                     className={`${project.size === "wide" ? "col-span-2 aspect-[2.015]"
                         : project.size === "tall" ? "row-span-2 aspect-[0.485]"
                             : project.size === "square" ? "aspect-[1]" : ""
-                        } rounded-3xl overflow-hidden`}
+                        } sm:rounded-3xl rounded-lg overflow-hidden`}
                 >
                     <Image
                         src={project.image}
