@@ -1,9 +1,9 @@
 import '../globals.css'
-import { Red_Hat_Display } from 'next/font/google'
+import { Space_Grotesk } from 'next/font/google'
 import Nav from '@/components/Nav'
 import { getBlog, getBlogs } from '@/sanity/sanity-utils'
 
-const red = Red_Hat_Display({ subsets: ['latin'] })
+const sg = Space_Grotesk({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Create Next App',
@@ -20,7 +20,7 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
-      <body className={` ${red.className} max-w-7xl m-auto bg-[#1B1B1B] bg-none px-10 text-white`}>
+      <body className={` ${sg.className} max-w-7xl m-auto bg-[#FEFEF0] bg-none px-10 text-[#141414]`}>
         <Nav />
         {children}
       </body>

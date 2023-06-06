@@ -19,7 +19,7 @@ export default async function Blog() {
                             <p className='text-9xl font-black uppercase translate-x-32 translate-y-16 text-outline-primary text-white/[0]'>
                                 {blogs.title}
                             </p>
-                            <p className='absolute z-[-10] text-9xl font-black uppercase translate-x-32 -translate-y-16 text-white'>
+                            <p className='absolute z-[-10] text-9xl font-black uppercase translate-x-32 -translate-y-16 text-[#141414]'>
                                 {blogs.title}
                             </p>
                             <div className=''>

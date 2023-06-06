@@ -1,4 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
+// /* eslint-disable @next/next/no-img-element */
 'use client'
 
 import { getPhysCompBlog } from "@/sanity/sanity-utils";
@@ -19,6 +19,18 @@ const components: PortableTextComponents = {
         // Ex. 1: customizing common list types
         bullet: ({ children }) => <li style={{ listStyleType: 'disc' }}>{children}</li>,
     },
+    types: {
+		code: ({ value }) => (
+            <pre className="bg-black/[0.5] p-5 text-[#FEFEF0] rounded-lg w-min my-4 mx-auto">
+                <code>
+                    {value.code}
+                </code>
+            </pre>
+        ),
+        image: ({ value }) => (
+            <Image src={value} alt={""}/>
+        )
+	}
 }
 
 export default async function PhysCompBlog({ params }: Props) {
@@ -45,16 +57,16 @@ export default async function PhysCompBlog({ params }: Props) {
                 <p className='absolute z-[-10] text-9xl font-black uppercase -translate-y-16 text-white'>
                     {physcompblog.title}
                 </p> */}
-                <h1 className="uppercase font-black text-7xl py-10 text-outline-primary text-white hover:text-white/0 transition duration-200">
+                <h1 className="uppercase font-black text-7xl py-10 text-outline-primary hover:text-white/0 transition duration-200">
                     {physcompblog.title}
                 </h1>
-                <img src={physcompblog.image} alt={physcompblog.title} className="w-auto" />
+                <img src={physcompblog.image} alt={physcompblog.title} className="w-1/2" />
             </div>
 
             <br />
             <PortableText
                 value={physcompblog.content}
-                components={{}}
+                components={components}
             />
         </div>
     )

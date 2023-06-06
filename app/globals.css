@@ -28,7 +28,7 @@ body {
 
 .text-outline-primary {
   -webkit-text-stroke: 1px;
-  -webkit-text-stroke-color: white;
+  -webkit-text-stroke-color: #141414;
 }
 
 .text-outline-none {
