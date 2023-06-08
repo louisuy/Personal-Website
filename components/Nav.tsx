@@ -52,6 +52,7 @@ const Nav = () => {
     //       </>
     //   </div>
     // </nav>
+    // TODO: Nav unavailable on mobile.
     <nav className="">
       <div className="flex justify-between">
         <Link href='/' className='text-2xl font-bold py-5 px-0'>
