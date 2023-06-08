@@ -66,7 +66,7 @@ export async function getPhysCompBlogs(): Promise<PhysComp[]> {
         url,
         content,
         "excerpt": array::join(string::split((pt::text(content)), "")[0..255], "") + "..."
-      }`
+      } | order(date desc)`
     )
 }
   

@@ -8,5 +8,6 @@ export type PhysComp = {
     slug: string;
     image: string;
     url: string;
+    date: Date;
     content: PortableTextBlock[];
 }
