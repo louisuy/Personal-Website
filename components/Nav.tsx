@@ -59,6 +59,9 @@ const Nav = () => {
         </Link>
 
         <div className="justify-between gap-5 hidden sm:flex">
+          <Link href='/university' className='text-xl py-5'>
+            University
+          </Link>
           <Link href='/projects' className='text-xl py-5'>
             Projects
           </Link>
