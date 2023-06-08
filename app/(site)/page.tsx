@@ -9,7 +9,7 @@ export default async function Home() {
       <div className='flex flex-col md:flex-row'>
         <div className='flex flex-col md:w-1/2'>
           <Image
-            src={'https://uploadthing.com/f/59103dd8-3758-4cb5-bc81-c89c469d2687_IMG_1072.jpg'}
+            src={'/louis.jpg'}
             alt={'Louis Picture'}
             width={5000}
             height={5000}
@@ -55,6 +55,14 @@ export default async function Home() {
             >
               <button className='px-4 py-2 bg-[#141414] text-[#FEFEF0] rounded-full uppercase w-32 hover:bg-[#FEFEF0] hover:text-[#141414] transition duration-200 border-[#141414] border-solid border-2'>
                 Portfolio
+              </button>
+            </Link>
+            <Link
+              href={'/ANTHONY-CV2023.pdf'}
+              target='_blank'
+            >
+              <button className='px-4 py-2 bg-[#141414] text-[#FEFEF0] rounded-full uppercase w-32 hover:bg-[#FEFEF0] hover:text-[#141414] transition duration-200 border-[#141414] border-solid border-2'>
+                CV
               </button>
             </Link>
           </div>
