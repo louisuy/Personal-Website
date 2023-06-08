@@ -27,6 +27,7 @@ const components: PortableTextComponents = {
                 </code>
             </pre>
         ),
+        // eslint-disable-next-line jsx-a11y/alt-text
         image: ({ value }) => <img src={value.imageUrl} />,
     },
     marks: {
