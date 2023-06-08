@@ -9,7 +9,7 @@ export default async function Home() {
       <div className='flex flex-col md:flex-row'>
         <div className='flex flex-col md:w-1/2'>
           <Image
-            src={'/../public/louis.jpg'}
+            src={'https://uploadthing.com/f/59103dd8-3758-4cb5-bc81-c89c469d2687_IMG_1072.jpg'}
             alt={'Louis Picture'}
             width={5000}
             height={5000}
