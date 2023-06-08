@@ -35,7 +35,7 @@ export default function SkillsSection({ className }: { className: string }) {
             </div>
             <div className="pb-4">
                 <h3 className="text-xl font-bold">Skills</h3>
-                <div className="flex flex-col md:flex-row pt-2 gap-4">
+                <div className="flex flex-row pt-2 gap-4">
                     <div>
                         <h4 className="font-bold">
                             LANGUAGES

@@ -96,7 +96,7 @@ export default async function Home() {
             year={'2020'}
             description={'Ideated and storyboarded branded content (HSBC, Noir Bar). Assisted as a camera operator, grip, and boom operator for a two-man crew, and created motion graphics for Jo-Koy Tour in Dubai.'}
           />
-          <SkillsSection className='flex md:hidden' />
+          <SkillsSection className='flex flex-col md:hidden' />
         </div>
       </div>
     </div>
