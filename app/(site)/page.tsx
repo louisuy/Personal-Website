@@ -50,7 +50,7 @@ export default async function Home() {
               </button>
             </Link>
             <Link
-              href={'https://github.com/louisuy'}
+              href={'./projects'}
               target='_blank'
             >
               <button className='px-4 py-2 bg-[#141414] text-[#FEFEF0] rounded-full uppercase w-32 hover:bg-[#FEFEF0] hover:text-[#141414] transition duration-200 border-[#141414] border-solid border-2'>
