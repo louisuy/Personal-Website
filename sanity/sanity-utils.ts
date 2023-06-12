@@ -2,6 +2,7 @@ import { createClient, groq } from 'next-sanity';
 import clientConfig from './config/client-config';
 import { Blog } from '@/types/Blog';
 import { PhysComp } from '@/types/PhysComp';
+import { PhysCompExps } from '@/types/PhysCompExps';
 import { UniProject } from '@/types/UniProject';
 import { Project } from '@/types/Project';
 
@@ -59,7 +60,7 @@ export async function getBlogs(): Promise<Blog[]> {
         "image": image.asset->url,
         url,
         content
-      }`,
+        }`,
 	);
 }
 
@@ -104,8 +105,24 @@ export async function getPhysCompBlog(slug: string): Promise<PhysComp> {
         "slug": slug.current,
         "image": image.asset->url,
         url,
-        content
+        content[]{}
         }`,
 		{ slug },
+	);
+}
+
+export async function getPhysCompExps(): Promise<PhysComp[]> {
+	return createClient(clientConfig).fetch(
+		groq`*[_type == "physcompexps"]{
+        _id,
+        _createdAt,
+        date,
+        title,
+        "slug": slug.current,
+        "image": image.asset->url,
+        url,
+        content,
+        "excerpt": array::join(string::split((pt::text(content)), "")[0..255], "") + "..."
+      } | order(date desc)`,
 	);
 }
